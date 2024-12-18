@@ -1,0 +1,20 @@
+{
+  "extends": "astro/tsconfigs/base", // Menggunakan konfigurasi Astro dasar
+  "include": [
+    ".astro/types.d.ts",
+    "**/*" // Menyertakan semua file TypeScript, TSX, dan file terkait lainnya
+  ],
+  "exclude": ["dist"], // Mengecualikan folder dist dari kompilasi
+  "compilerOptions": {
+    "verbatimModuleSyntax": false,
+    "target": "ESNext", // Menargetkan ESNext untuk mendapatkan fitur terbaru
+    "module": "ESNext", // Menggunakan ESNext untuk modul agar mendukung ESM
+    "moduleResolution": "Node", // Menyelesaikan modul seperti yang dilakukan di Node.js
+    "jsx": "react-jsx", // Mendukung JSX dengan React
+    "jsxImportSource": "react", // Sumber JSX adalah React
+    "esModuleInterop": true, // Mengaktifkan interoperabilitas dengan CommonJS
+    "skipLibCheck": true, // Menghindari pemeriksaan tipe di file library
+    "allowSyntheticDefaultImports": true, // Mengizinkan impor default untuk CommonJS
+    "strict": true // Mengaktifkan mode ketat di TypeScript
+  }
+}
